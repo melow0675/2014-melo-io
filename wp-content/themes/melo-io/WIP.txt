@@ -1,0 +1,9 @@
+J’ai mis en place le wordpress
+
+style.css est le style global du thème
+
+index est un template
+http://wordpress.bbxdesign.com/hierarchie-des-templates
+
+
+Pour l’instant les fichiers CSS et JS liés sont dues à l’archi de fichier ancienne. I va falloir dupliquer pour faire ça en PHP avec les links WP.
