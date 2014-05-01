@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'melo-io';
+	src:url('fonts/melo-io.eot?-joldsy');
+	src:url('fonts/melo-io.eot?#iefix-joldsy') format('embedded-opentype'),
+		url('fonts/melo-io.woff?-joldsy') format('woff'),
+		url('fonts/melo-io.ttf?-joldsy') format('truetype'),
+		url('fonts/melo-io.svg?-joldsy#melo-io') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'melo-io';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE000:before {
+	content: "\e000";
+}
+.icon-uniE001:before {
+	content: "\e001";
+}
+.icon-uniE002:before {
+	content: "\e002";
+}
+.icon-uniE003:before {
+	content: "\e003";
+}
+.icon-menu:before {
+	content: "\e600";
+}
+.icon-linkedin:before {
+	content: "\e601";
+}
+.icon-mail:before {
+	content: "\e602";
+}

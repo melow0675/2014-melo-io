@@ -1,0 +1,74 @@
+/**
+ *	SCSS
+ *	styles.scss
+ * 
+ *	@author Melodie Mancipoz
+ *	Copyright (c) 2013, Melodie Mancipoz (MELO.IO). All rights reserved.
+ * 
+ *	Import all & reset StyleSheet
+ * 
+ */
+ 
+ 
+/**
+ *	Character set
+ *
+ */
+@CHARSET "UTF-8";
+
+/**
+ *	Compass import
+ *
+ */
+@import "compass";
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+
+/**
+ *	General variables
+ *
+ */
+$pink-melo : #e94b51;
+$grey-melo : #444444;
+$green-melo : #4ab595;
+$blue-melo : #2bbdef;
+$purple-melo : #4a377f;
+$yellow-melo : #ebe208;
+
+$touch-size : 40px;
+$margin-left-right : 5%;
+$margin-top-bottom : 10px;
+
+$header-height : 50px;
+
+/**
+ *	Mixins
+ *
+ */
+
+@mixin radial-gradient($color-back, $color-gradient) {
+	background: -moz-radial-gradient(center center, ellipse cover,  $color-gradient 0%, $color-back 70%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$color-gradient), color-stop(70%,$color-back));
+	background: -webkit-radial-gradient(center, ellipse cover,  $color-gradient 0%,$color-back 70%);
+	background: -o-radial-gradient(center, ellipse cover,  $color-gradient 0%,$color-back 70%);
+	background: -ms-radial-gradient(center, ellipse cover,  $color-gradient 0%,$color-back 70%);
+	background: radial-gradient(ellipse at center,  $color-gradient 0%,$color-back 70%);
+}
+
+@mixin intrinsic {
+	width: intrinsic;
+}
+
+
+/**
+ *	Import SCSS Files
+ *
+ */
+@import "basics";
+@import "welcome";
+@import "swipe";
+@import "header";
+@import "skills";
+@import "project";
+

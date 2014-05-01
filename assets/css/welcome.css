@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/**
+ *	SCSS
+ *	welcome.scss
+ * 
+ *	@author Mélodie Mancipoz
+ *	Copyright (c) 2013, Mélodie Mancipoz (MELO.IO). All rights reserved.
+ * 
+ *	Welcome section stylesheets
+ * 
+ */
+/* line 12, ../sass/welcome.scss */
+#welcome {
+  padding-top: 50px; }
