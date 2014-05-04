@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/**
+ *	SCSS
+ *	swipe.scss
+ * 
+ *	@author Mélodie Mancipoz
+ *	Copyright (c) 2013, Mélodie Mancipoz (MELO.IO). All rights reserved.
+ * 
+ *	Slideshow StyleSheet
+ * 
+ */
+/* line 15, ../sass/swipe.scss */
+.swipe ul li img {
+  width: 100%; }

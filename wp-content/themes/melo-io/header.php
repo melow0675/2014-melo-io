@@ -1,4 +1,16 @@
-<html lang="fr">
+<?php
+/**
+ * The Header for our theme
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package WordPress
+ * @subpackage Melo-io_Theme
+ * @since Twenty Fourteen 1.0
+ */
+?>
+
+<html <?php language_attributes(); ?>>
 	<head>
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
 		<meta content="yes" name="apple-mobile-web-app-capable">
@@ -14,17 +26,25 @@
 		<meta content="index,follow,all" name="robots">
 		<meta content="no" http-equiv="imagetoolbar">
 		
-		<! -- Favicons -->
-		<link href="assets/images/favicon-retina.png" rel="apple-touch-icon">
-		<link href="assets/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+		<!--[if lt IE 9]>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+		<![endif]-->
+		<?php wp_head(); ?>
 		
-		<! -- Stylesheets -->
-		<link media="all" title="melo.io" href="assets/css/styles.css?v=<?php time() ?>" type="text/css" rel="stylesheet">
-		<link media="all" title="melo.io" href="assets/fonts/melo-io/style.css?v=<?php time() ?>" type="text/css" rel="stylesheet">
+		<! -- Favicons -->
+		<link href="<?php echo get_stylesheet_directory_uri();?>/img/favicon-retina.png" rel="apple-touch-icon">
+		<link href="<?php echo get_stylesheet_directory_uri();?>/img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+		
+		<! -- Stylesheets -->		
+		<link type="text/css" rel="stylesheet" media="all" title="melo.io" href="<?php echo get_stylesheet_directory_uri();?>/style.css<?php time() ?>">
+		<link media="all" title="melo.io" href="<?php echo get_stylesheet_directory_uri();?>/fonts/melo-io/style.css?v=<?php time() ?>" type="text/css" rel="stylesheet">
 		
 		<! -- Jquery -->
-		<script src="assets/js/jquery-min.js" type="text/javascript"></script>
-		<script src="assets/js/common.min.js" type="text/javascript"></script>
+		<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.min.js" type="text/javascript"></script>
+		<script src="<?php echo get_stylesheet_directory_uri();?>/js/common.min.js" type="text/javascript"></script>
+		<?php if ( is_page('home') ) : ?>
+			<script src="<?php echo get_stylesheet_directory_uri();?>/js/home.min.js" type="text/javascript"></script>
+		<?php endif; ?>
 		
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=
@@ -40,18 +60,13 @@
 		
 			<div id="header-logo">
 <!-- 				<img class="fleche" src="assets/img/logo_mini.png"/> -->
-				<img class="melo" src="assets/img/logo_melo_io_white.png" alt="logo melo.io" />
+				<img class="melo" src="<?php echo get_stylesheet_directory_uri();?>/img/logo_melo_io_white.png" alt="logo melo.io" />
 			</div>
 			
 			<div id="hamburger" class="icon-menu"></div>
 			
 			<nav id="main-menu">
-				<ul>
-					<li>Works</li>
-					<li>Skills</li>
-					<li>About</li>
-				</ul>
-				<ul>
+				<ul id="social-networks">
 					<li>
 						<a class="icon-uniE001"></a>
 					</li>
@@ -62,6 +77,13 @@
 						<a class="icon-linkedin"></a>
 					</li>
 				</ul>
+				<ul id="site-menu">
+					<li><a href="<?= home_url(); ?>">Welcome</a></li>
+					<li><a href="<?= get_page_link( get_page_by_title('Works') ); ?>">Works</a></li>
+					<li><a href="#go-to-footer">Contact</a></li>
+				</ul>
 			</nav>
 			
 		</header>
+		
+		<div id="main">

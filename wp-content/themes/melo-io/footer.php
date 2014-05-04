@@ -1,3 +1,6 @@
+		</div>
+		<div id="go-to-footer"></div>
+		
 		<footer class="full-height" id="footer">
 		
 			<div class="contact">
@@ -26,4 +29,5 @@
 		</footer>
 		
 	</body>
+	
 </html>

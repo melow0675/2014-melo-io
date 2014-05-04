@@ -1,0 +1,90 @@
+/*
+Theme Name: melo-io
+Theme URI: http://melo.io
+Description: Ce thème destiné au portfolio a été intégralement conçu par Mélodie Mancipoz, designer UX/UI. Celui-ci est responsive et vous permet de mettre en avant vos projets. 
+Version: 1.0
+Author: Melodie Mancipoz
+Author URI: http://melo.io/
+Tags: responsive, full-width, simple, design, designer
+
+    Melodie Mancipoz
+
+http://melo.io/
+
+*/
+
+
+/**
+ *	SCSS
+ *	styles.scss
+ * 
+ *	@author Melodie Mancipoz
+ *	Copyright (c) 2013, Melodie Mancipoz (MELO.IO). All rights reserved.
+ * 
+ *	Import all & reset StyleSheet
+ * 
+ */
+ 
+ 
+/**
+ *	Character set
+ *
+ */
+@CHARSET "UTF-8";
+
+/**
+ *	Compass import
+ *
+ */
+@import "compass";
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+
+/**
+ *	General variables
+ *
+ */
+$pink-melo : #e94b51;
+$grey-melo : #444444;
+$green-melo : #4ab595;
+$blue-melo : #2bbdef;
+$purple-melo : #4a377f;
+$yellow-melo : #ebe208;
+
+$touch-size : 40px;
+$margin-left-right : 5%;
+$margin-top-bottom : 10px;
+
+$header-height : 50px;
+
+/**
+ *	Mixins
+ *
+ */
+
+@mixin radial-gradient($color-back, $color-gradient) {
+	background: -moz-radial-gradient(center center, ellipse cover,  $color-gradient 0%, $color-back 70%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$color-gradient), color-stop(70%,$color-back));
+	background: -webkit-radial-gradient(center, ellipse cover,  $color-gradient 0%,$color-back 70%);
+	background: -o-radial-gradient(center, ellipse cover,  $color-gradient 0%,$color-back 70%);
+	background: -ms-radial-gradient(center, ellipse cover,  $color-gradient 0%,$color-back 70%);
+	background: radial-gradient(ellipse at center,  $color-gradient 0%,$color-back 70%);
+}
+
+@mixin intrinsic {
+	width: intrinsic;
+}
+
+
+/**
+ *	Import SCSS Files
+ *
+ */
+@import "basics";
+@import "welcome";
+@import "swipe";
+@import "header";
+@import "skills";
+@import "project";
+

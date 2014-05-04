@@ -18,11 +18,47 @@ $(document).ready(function(){
 	/**
 	 ** MENU
 	 **/
+	var menuOn = false;
 	var hamburger = $("#hamburger");
+	var menu = $("#main-menu");
+	
 	hamburger.click(function() {
-		// Ajouter un effet d'apparition CSS3 sur show-menu
-		$("#main-menu ul").toggleClass("show-menu");
-	})
+		menu.toggleClass("js-show-main-menu");
+		if (menuOn = false) {
+			menuOn = true;
+		} else {
+			menuOn = false;
+		}
+	});
+	
+	menu.click(function(){
+		if (menuOn = true) {
+			menu.toggleClass("js-show-main-menu");
+			menuOn = false;
+		}
+	});
+	
+	/**
+	 ** SCROLL TO ANCHOR
+	 **/
+	 
+	var scrollToAnchor = function(attr) {
+	    var elem = $("*[id='"+ attr +"']");
+	    var elemTop = elem.offset().top;
+	    var myTop = parseFloat(elemTop) - parseInt(50);
+	    $('html,body').animate({scrollTop: myTop}, 2500);
+	}
+	 
+	$('a[href*=#]').each(function() {
+		$(this).click(function(e) {
+			e.preventDefault ? e.preventDefault() : e.returnValue = false;
+			var attr = $(this).attr('href');
+			var attrLength = attr.length;
+			var idElement = attr.substring(1, attrLength);
+			scrollToAnchor(idElement);
+		});
+	});
+	
 	
 	/**
 	 ** HOME

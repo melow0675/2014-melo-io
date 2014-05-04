@@ -2,11 +2,11 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "assets/css"
-sass_dir = "assets/sass"
-images_dir = "assets/img"
-javascripts_dir = "assets/js"
-fonts_dir = "assets/fonts"
+css_dir = "wp-content/themes/melo-io/css"
+sass_dir = "wp-content/themes/melo-io/sass"
+images_dir = "wp-content/themes/melo-io/img"
+javascripts_dir = "wp-content/themes/melo-io/js"
+fonts_dir = "wp-content/themes/melo-io/fonts"
 
 output_style = :nested
 
@@ -24,3 +24,11 @@ color_output = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
+
+require 'fileutils'
+on_stylesheet_saved do |file|
+	if File.exists?(file) && File.basename(file) == "style.css"
+		puts "Moving: #{file}"
+		FileUtils.mv(file, File.dirname(file) + "/../" + File.basename(file))
+	end
+end
